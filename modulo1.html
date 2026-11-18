@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo I - Fundamentos | Lógica de Programação com Java Básico</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="brand">
+        <span class="brand-badge">JAVA</span>
+        <span>Lógica de Programação</span>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="">Início & Plano</a></li>
+<li><a href="modulo1.html" class="active">Módulo I</a></li>
+<li><a href="modulo2.html" class="">Módulo II</a></li>
+<li><a href="modulo3.html" class="">Módulo III</a></li>
+<li><a href="modulo4.html" class="">Módulo IV</a></li>
+<li><a href="modulo5.html" class="">Módulo V</a></li>
+<li><a href="modulo6.html" class="">Módulo VI</a></li>
+<li><a href="avaliacao.html" class="">Avaliação Final</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-container">
+    
+<div class="chapter-separator">
+  <div class="chapter-line"></div>
+  <div class="chapter-badge">Módulo I</div>
+  <div class="chapter-line right"></div>
+</div>
+
+<section class="module-intro-card">
+  <h1>Fundamentos de Lógica e Ambiente Java</h1>
+  <p>
+    Neste primeiro passo da nossa jornada, vamos desmistificar o que é programar, entender como o computador interpreta nossas instruções e conhecer a arquitetura que torna o Java famoso pelo lema: <em>"Escreva uma vez, execute em qualquer lugar"</em>.
+  </p>
+  <div class="exercise-notice">
+    Atenção: Este módulo contém 10 questões ao final (8 objetivas e 2 práticas de código).
+  </div>
+</section>
+
+<div class="title-balloon">1. O que é Lógica de Programação e Algoritmo?</div>
+<section class="content-card">
+  <p>
+    Pense em uma receita de bolo ou no passo a passo para trocar um pneu furado. Quando você organiza ações em uma sequência lógica para atingir um objetivo, você está criando um <strong>algoritmo</strong>.
+  </p>
+  <p>
+    Na computação, um algoritmo segue três etapas clássicas conhecidas como <strong>E-P-S</strong>:
+  </p>
+  <ul>
+    <li><strong>Entrada:</strong> Os dados que o programa recebe (ex.: dois números digitados pelo usuário).</li>
+    <li><strong>Processamento:</strong> O cálculo ou transformação feita sobre esses dados (ex.: somar os dois números).</li>
+    <li><strong>Saída:</strong> O resultado apresentado ao usuário (ex.: mostrar o total na tela).</li>
+  </ul>
+</section>
+
+<div class="title-balloon">2. Como o Java Funciona: JDK, JRE e JVM</div>
+<section class="content-card">
+  <p>
+    Diferente de linguagens que geram código preso a um único sistema operacional, o Java compila seu código-fonte (<code class="inline">.java</code>) para um formato intermediário chamado <strong>Bytecode</strong> (<code class="inline">.class</code>).
+  </p>
+
+  <div class="table-caption">Tabela 2 — Componentes do Ecossistema Java</div>
+  <div class="table-responsive">
+    <table>
+      <thead>
+        <tr>
+          <th>Sigla</th>
+          <th>Nome Completo</th>
+          <th>Função Principal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>JVM</strong></td>
+          <td>Java Virtual Machine</td>
+          <td>Máquina virtual que lê o bytecode (<code class="inline">.class</code>) e o traduz para o sistema operacional onde está rodando.</td>
+        </tr>
+        <tr>
+          <td><strong>JRE</strong></td>
+          <td>Java Runtime Environment</td>
+          <td>Ambiente de execução composto pela JVM + bibliotecas padrão necessárias para rodar programas Java.</td>
+        </tr>
+        <tr>
+          <td><strong>JDK</strong></td>
+          <td>Java Development Kit</td>
+          <td>Kit completo para desenvolvedores: contém a JRE + o compilador (<code class="inline">javac</code>) e ferramentas de criação.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<div class="title-balloon">3. Seu Primeiro Programa em Java</div>
+<section class="content-card">
+  <p>
+    Todo código em Java vive dentro de uma <strong>classe</strong>, e o nome do arquivo deve ser idêntico ao nome da classe pública (respeitando letras maiúsculas e minúsculas).
+  </p>
+
+  <div class="code-wrapper">
+    <div class="code-header"><span>HelloWorld.java</span><span>Primeiro Exemplo</span></div>
+    <pre>public class HelloWorld {
+    public static void main(String[] args) {
+        // Exibe uma mensagem no console e quebra a linha
+        System.out.println("Olá, Mundo! Bem-vindo ao Java!");
+    }
+}</pre>
+  </div>
+
+  <div class="professor-tip">
+    <strong>Dica do Professor:</strong>
+    Java é <em>case-sensitive</em> (diferencia maiúsculas de minúsculas). Escrever <code class="inline">system.out.println</code> com "s" minúsculo causará erro de compilação!
+  </div>
+</section>
+
+<div class="title-balloon orange">Exercícios do Módulo I (10 Questões)</div>
+<section class="exercise-section">
+  <form id="form-m1">
+    <div class="question-box mc-question" data-answer="B"><div class="question-title"><span class="question-number">Questão 01</span> O que melhor define um algoritmo na ciência da computação?</div><div class="options-list"><label class="option-label"><input type="radio" name="q1" value="A"><span><strong>A)</strong> Um componente físico instalado na placa-mãe do computador.</span></label>
+<label class="option-label"><input type="radio" name="q1" value="B"><span><strong>B)</strong> Uma sequência finita, lógica e bem definida de passos para resolver um problema.</span></label>
+<label class="option-label"><input type="radio" name="q1" value="C"><span><strong>C)</strong> Um arquivo exclusivo da linguagem Java usado para armazenar imagens.</span></label>
+<label class="option-label"><input type="radio" name="q1" value="D"><span><strong>D)</strong> Um tipo de vírus que impede a compilação de programas.</span></label>
+<label class="option-label"><input type="radio" name="q1" value="E"><span><strong>E)</strong> Apenas cálculos matemáticos avançados feitos sem computador.</span></label></div></div><div class="question-box mc-question" data-answer="C"><div class="question-title"><span class="question-number">Questão 02</span> Qual é o papel principal da JVM (Java Virtual Machine)?</div><div class="options-list"><label class="option-label"><input type="radio" name="q2" value="A"><span><strong>A)</strong> Substituir o sistema operacional Windows ou Linux.</span></label>
+<label class="option-label"><input type="radio" name="q2" value="B"><span><strong>B)</strong> Editar textos e planilhas eletrônicas.</span></label>
+<label class="option-label"><input type="radio" name="q2" value="C"><span><strong>C)</strong> Interpretar e executar o bytecode Java (.class), garantindo portabilidade entre plataformas.</span></label>
+<label class="option-label"><input type="radio" name="q2" value="D"><span><strong>D)</strong> Conectar o monitor à placa de vídeo.</span></label>
+<label class="option-label"><input type="radio" name="q2" value="E"><span><strong>E)</strong> Compactar arquivos em formato ZIP automaticamente.</span></label></div></div><div class="question-box mc-question" data-answer="C"><div class="question-title"><span class="question-number">Questão 03</span> Qual extensão possui um arquivo de código-fonte escrito em Java antes de ser compilado?</div><div class="options-list"><label class="option-label"><input type="radio" name="q3" value="A"><span><strong>A)</strong> .class</span></label>
+<label class="option-label"><input type="radio" name="q3" value="B"><span><strong>B)</strong> .exe</span></label>
+<label class="option-label"><input type="radio" name="q3" value="C"><span><strong>C)</strong> .java</span></label>
+<label class="option-label"><input type="radio" name="q3" value="D"><span><strong>D)</strong> .jvm</span></label>
+<label class="option-label"><input type="radio" name="q3" value="E"><span><strong>E)</strong> .jar</span></label></div></div><div class="question-box mc-question" data-answer="A"><div class="question-title"><span class="question-number">Questão 04</span> Qual é a assinatura padrão do método principal que inicia a execução de um programa Java?</div><div class="options-list"><label class="option-label"><input type="radio" name="q4" value="A"><span><strong>A)</strong> public static void main(String[] args)</span></label>
+<label class="option-label"><input type="radio" name="q4" value="B"><span><strong>B)</strong> start program()</span></label>
+<label class="option-label"><input type="radio" name="q4" value="C"><span><strong>C)</strong> void iniciar(int args)</span></label>
+<label class="option-label"><input type="radio" name="q4" value="D"><span><strong>D)</strong> public main(String texto)</span></label>
+<label class="option-label"><input type="radio" name="q4" value="E"><span><strong>E)</strong> static int run()</span></label></div></div><div class="question-box mc-question" data-answer="D"><div class="question-title"><span class="question-number">Questão 05</span> Qual comando exibe uma mensagem no console e pula automaticamente para a linha seguinte?</div><div class="options-list"><label class="option-label"><input type="radio" name="q5" value="A"><span><strong>A)</strong> System.out.print("Olá");</span></label>
+<label class="option-label"><input type="radio" name="q5" value="B"><span><strong>B)</strong> System.in.read("Olá");</span></label>
+<label class="option-label"><input type="radio" name="q5" value="C"><span><strong>C)</strong> Console.write("Olá");</span></label>
+<label class="option-label"><input type="radio" name="q5" value="D"><span><strong>D)</strong> System.out.println("Olá");</span></label>
+<label class="option-label"><input type="radio" name="q5" value="E"><span><strong>E)</strong> Print.line("Olá");</span></label></div></div><div class="question-box mc-question" data-answer="B"><div class="question-title"><span class="question-number">Questão 06</span> O que o compilador javac gera após compilar com sucesso um arquivo Programa.java?</div><div class="options-list"><label class="option-label"><input type="radio" name="q6" value="A"><span><strong>A)</strong> Programa.exe</span></label>
+<label class="option-label"><input type="radio" name="q6" value="B"><span><strong>B)</strong> Programa.class (bytecode)</span></label>
+<label class="option-label"><input type="radio" name="q6" value="C"><span><strong>C)</strong> Programa.txt</span></label>
+<label class="option-label"><input type="radio" name="q6" value="D"><span><strong>D)</strong> Programa.html</span></label>
+<label class="option-label"><input type="radio" name="q6" value="E"><span><strong>E)</strong> Programa.jdk</span></label></div></div><div class="question-box mc-question" data-answer="C"><div class="question-title"><span class="question-number">Questão 07</span> Em Java, qual símbolo encerra a maioria das instruções simples (comandos)?</div><div class="options-list"><label class="option-label"><input type="radio" name="q7" value="A"><span><strong>A)</strong> Dois-pontos (:)</span></label>
+<label class="option-label"><input type="radio" name="q7" value="B"><span><strong>B)</strong> Vírgula (,)</span></label>
+<label class="option-label"><input type="radio" name="q7" value="C"><span><strong>C)</strong> Ponto e vírgula (;)</span></label>
+<label class="option-label"><input type="radio" name="q7" value="D"><span><strong>D)</strong> Ponto final (.)</span></label>
+<label class="option-label"><input type="radio" name="q7" value="E"><span><strong>E)</strong> Cerquilha (#)</span></label></div></div><div class="question-box mc-question" data-answer="C"><div class="question-title"><span class="question-number">Questão 08</span> Como escrevemos um comentário de apenas uma linha em Java?</div><div class="options-list"><label class="option-label"><input type="radio" name="q8" value="A"><span><strong>A)</strong> &lt;!-- comentário --&gt;</span></label>
+<label class="option-label"><input type="radio" name="q8" value="B"><span><strong>B)</strong> # comentário</span></label>
+<label class="option-label"><input type="radio" name="q8" value="C"><span><strong>C)</strong> // comentário</span></label>
+<label class="option-label"><input type="radio" name="q8" value="D"><span><strong>D)</strong> ** comentário **</span></label>
+<label class="option-label"><input type="radio" name="q8" value="E"><span><strong>E)</strong> -- comentário</span></label></div></div><div class="question-box"><div class="question-title"><span class="question-number">Questão 09 • Prática</span> Escreva um programa Java completo chamado BoasVindas que exiba no console o seu nome na primeira linha e a frase 'Estou aprendendo Java!' na segunda linha.</div><textarea class="code-writing-area" placeholder="Escreva aqui o código Java completo..."></textarea><div class="solution-toggle"><button type="button" class="btn" onclick="toggleSolucao(this)">Ver Sugestão de Código</button><div class="solution-box"><strong>Sugestão de implementação em Java:</strong><div class="code-wrapper"><div class="code-header"><span>Solução Exemplo</span><span>Java</span></div><pre>public class BoasVindas {
+    public static void main(String[] args) {
+        System.out.println("Olá, eu sou estudante de Java!");
+        System.out.println("Estou aprendendo Java!");
+    }
+}</pre></div></div></div></div><div class="question-box"><div class="question-title"><span class="question-number">Questão 10 • Prática</span> Escreva um programa Java completo chamado CartaoApresentacao que exiba uma moldura simples feita com asteriscos (***) e, dentro dela, o nome do curso e o ano atual.</div><textarea class="code-writing-area" placeholder="Escreva aqui o código Java completo..."></textarea><div class="solution-toggle"><button type="button" class="btn" onclick="toggleSolucao(this)">Ver Sugestão de Código</button><div class="solution-box"><strong>Sugestão de implementação em Java:</strong><div class="code-wrapper"><div class="code-header"><span>Solução Exemplo</span><span>Java</span></div><pre>public class CartaoApresentacao {
+    public static void main(String[] args) {
+        System.out.println("******************************");
+        System.out.println("* Curso: Java Básico         *");
+        System.out.println("* Ano: 2026                  *");
+        System.out.println("******************************");
+    }
+}</pre></div></div></div></div>
+    <div class="quiz-actions">
+      <button type="button" class="btn btn-orange" onclick="verificarRespostas('form-m1', 'fb-m1')">Verificar Respostas Objetivas</button>
+      <button type="button" class="btn" onclick="limparRespostas('form-m1', 'fb-m1')">Limpar Respostas</button>
+      <span id="fb-m1" class="quiz-feedback"></span>
+    </div>
+  </form>
+</section>
+
+<div class="page-nav-footer">
+  <a href="index.html" class="btn">&larr; Voltar ao Início</a>
+  <a href="modulo2.html" class="btn btn-orange">Próximo: Módulo II &rarr;</a>
+</div>
+
+  </main>
+
+  <footer>
+    <p><strong>Curso Completo de Lógica de Programação com Java Básico</strong></p>
+    <p>Apostila Interativa • 6 Módulos • 60 Exercícios de Fixação • Avaliação Final</p>
+  </footer>
+  <script src="script.js"></script>
+    
+</body>
+</html>

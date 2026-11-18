@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo II - Variáveis e Scanner | Lógica de Programação com Java Básico</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="brand">
+        <span class="brand-badge">JAVA</span>
+        <span>Lógica de Programação</span>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="">Início & Plano</a></li>
+<li><a href="modulo1.html" class="">Módulo I</a></li>
+<li><a href="modulo2.html" class="active">Módulo II</a></li>
+<li><a href="modulo3.html" class="">Módulo III</a></li>
+<li><a href="modulo4.html" class="">Módulo IV</a></li>
+<li><a href="modulo5.html" class="">Módulo V</a></li>
+<li><a href="modulo6.html" class="">Módulo VI</a></li>
+<li><a href="avaliacao.html" class="">Avaliação Final</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-container">
+    
+<div class="chapter-separator">
+  <div class="chapter-line"></div>
+  <div class="chapter-badge">Módulo II</div>
+  <div class="chapter-line right"></div>
+</div>
+
+<section class="module-intro-card">
+  <h1>Variáveis, Tipos Primitivos e Entrada de Dados</h1>
+  <p>
+    Para resolver problemas reais, nossos programas precisam guardar informações na memória e interagir com quem está usando o sistema. Vamos aprender a criar variáveis, realizar cálculos e capturar dados do teclado.
+  </p>
+  <div class="exercise-notice">
+    Atenção: Este módulo contém 10 questões ao final (8 objetivas e 2 práticas de código).
+  </div>
+</section>
+
+<div class="title-balloon">1. Variáveis e Tipos Primitivos</div>
+<section class="content-card">
+  <p>
+    Imagine uma variável como uma caixinha etiquetada na memória RAM do computador. Em Java, somos obrigados a dizer qual tipo de dado cabe dentro de cada caixinha antes de usá-la.
+  </p>
+
+  <div class="table-caption">Tabela 3 — Principais Tipos de Dados em Java</div>
+  <div class="table-responsive">
+    <table>
+      <thead>
+        <tr>
+          <th>Tipo</th>
+          <th>Categoria</th>
+          <th>Exemplo de Valor</th>
+          <th>Uso Comum</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code class="inline">int</code></td>
+          <td>Inteiro</td>
+          <td><code class="inline">25</code>, <code class="inline">-10</code>, <code class="inline">2026</code></td>
+          <td>Idades, quantidades, contadores</td>
+        </tr>
+        <tr>
+          <td><code class="inline">long</code></td>
+          <td>Inteiro Longo</td>
+          <td><code class="inline">9000000000L</code></td>
+          <td>Números inteiros muito grandes</td>
+        </tr>
+        <tr>
+          <td><code class="inline">double</code></td>
+          <td>Ponto Flutuante</td>
+          <td><code class="inline">19.99</code>, <code class="inline">3.1415</code></td>
+          <td>Preços, notas, médias, medidas</td>
+        </tr>
+        <tr>
+          <td><code class="inline">boolean</code></td>
+          <td>Lógico</td>
+          <td><code class="inline">true</code> ou <code class="inline">false</code></td>
+          <td>Verificações, status ativo/inativo</td>
+        </tr>
+        <tr>
+          <td><code class="inline">char</code></td>
+          <td>Caractere Único</td>
+          <td><code class="inline">'A'</code>, <code class="inline">'@'</code></td>
+          <td>Uma única letra entre aspas simples</td>
+        </tr>
+        <tr>
+          <td><code class="inline">String</code></td>
+          <td>Texto (Classe)</td>
+          <td><code class="inline">"Curso Java"</code></td>
+          <td>Nomes, frases e textos entre aspas duplas</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<div class="title-balloon">2. Operadores Aritméticos, Relacionais e Lógicos</div>
+<section class="content-card">
+  <ul>
+    <li><strong>Aritméticos:</strong> <code class="inline">+</code> (soma), <code class="inline">-</code> (subtração), <code class="inline">*</code> (multiplicação), <code class="inline">/</code> (divisão) e <code class="inline">%</code> (resto da divisão ou módulo).</li>
+    <li><strong>Relacionais:</strong> <code class="inline">==</code> (igual), <code class="inline">!=</code> (diferente), <code class="inline">&gt;</code> (maior), <code class="inline">&lt;</code> (menor), <code class="inline">&gt;=</code> (maior ou igual), <code class="inline">&lt;=</code> (menor ou igual).</li>
+    <li><strong>Lógicos:</strong> <code class="inline">&&</code> (E lógico), <code class="inline">||</code> (OU lógico), <code class="inline">!</code> (NÃO / negação).</li>
+  </ul>
+</section>
+
+<div class="title-balloon">3. Lendo Dados do Teclado com Scanner</div>
+<section class="content-card">
+  <p>
+    Para ler o que o usuário digita, importamos a classe <code class="inline">java.util.Scanner</code> no topo do arquivo e criamos um leitor ligado à entrada padrão (<code class="inline">System.in</code>).
+  </p>
+
+  <div class="code-wrapper">
+    <div class="code-header"><span>CadastroSimples.java</span><span>Entrada e Saída</span></div>
+    <pre>import java.util.Scanner;
+
+public class CadastroSimples {
+    public static void main(String[] args) {
+        Scanner leitor = new Scanner(System.in);
+
+        System.out.print("Digite seu nome: ");
+        String nome = leitor.nextLine();
+
+        System.out.print("Digite sua idade: ");
+        int idade = leitor.nextInt();
+
+        System.out.println("Olá, " + nome + "! Você tem " + idade + " anos.");
+        leitor.close();
+    }
+}</pre>
+  </div>
+</section>
+
+<div class="title-balloon orange">Exercícios do Módulo II (10 Questões)</div>
+<section class="exercise-section">
+  <form id="form-m2">
+    <div class="question-box mc-question" data-answer="C"><div class="question-title"><span class="question-number">Questão 01</span> Qual tipo primitivo em Java é mais indicado para armazenar o preço de um produto com casas decimais, como 49.90?</div><div class="options-list"><label class="option-label"><input type="radio" name="q1" value="A"><span><strong>A)</strong> int</span></label>
+<label class="option-label"><input type="radio" name="q1" value="B"><span><strong>B)</strong> boolean</span></label>
+<label class="option-label"><input type="radio" name="q1" value="C"><span><strong>C)</strong> double</span></label>
+<label class="option-label"><input type="radio" name="q1" value="D"><span><strong>D)</strong> char</span></label>
+<label class="option-label"><input type="radio" name="q1" value="E"><span><strong>E)</strong> byte</span></label></div></div><div class="question-box mc-question" data-answer="B"><div class="question-title"><span class="question-number">Questão 02</span> Qual será o resultado da expressão Java: int x = 10 % 3;</div><div class="options-list"><label class="option-label"><input type="radio" name="q2" value="A"><span><strong>A)</strong> 3</span></label>
+<label class="option-label"><input type="radio" name="q2" value="B"><span><strong>B)</strong> 1</span></label>
+<label class="option-label"><input type="radio" name="q2" value="C"><span><strong>C)</strong> 0</span></label>
+<label class="option-label"><input type="radio" name="q2" value="D"><span><strong>D)</strong> 3.33</span></label>
+<label class="option-label"><input type="radio" name="q2" value="E"><span><strong>E)</strong> 30</span></label></div></div><div class="question-box mc-question" data-answer="C"><div class="question-title"><span class="question-number">Questão 03</span> Qual classe da biblioteca java.util é comumente utilizada para ler dados digitados pelo usuário no console?</div><div class="options-list"><label class="option-label"><input type="radio" name="q3" value="A"><span><strong>A)</strong> Printer</span></label>
+<label class="option-label"><input type="radio" name="q3" value="B"><span><strong>B)</strong> Keyboard</span></label>
+<label class="option-label"><input type="radio" name="q3" value="C"><span><strong>C)</strong> Scanner</span></label>
+<label class="option-label"><input type="radio" name="q3" value="D"><span><strong>D)</strong> ReaderConsole</span></label>
+<label class="option-label"><input type="radio" name="q3" value="E"><span><strong>E)</strong> SystemRead</span></label></div></div><div class="question-box mc-question" data-answer="A"><div class="question-title"><span class="question-number">Questão 04</span> Qual valor a variável resultado armazenará após executar o código abaixo?</div><div class="code-wrapper"><div class="code-header"><span>Trecho Java</span><span>Analise o código</span></div><pre>int a = 10;
+int b = 15;
+boolean resultado = (a < b) && (b == 15);</pre></div><div class="options-list"><label class="option-label"><input type="radio" name="q4" value="A"><span><strong>A)</strong> true</span></label>
+<label class="option-label"><input type="radio" name="q4" value="B"><span><strong>B)</strong> false</span></label>
+<label class="option-label"><input type="radio" name="q4" value="C"><span><strong>C)</strong> 15</span></label>
+<label class="option-label"><input type="radio" name="q4" value="D"><span><strong>D)</strong> 10</span></label>
+<label class="option-label"><input type="radio" name="q4" value="E"><span><strong>E)</strong> Erro de compilação</span></label></div></div><div class="question-box mc-question" data-answer="B"><div class="question-title"><span class="question-number">Questão 05</span> Como declaramos corretamente uma variável de texto em Java?</div><div class="options-list"><label class="option-label"><input type="radio" name="q5" value="A"><span><strong>A)</strong> string nome = 'Ana';</span></label>
+<label class="option-label"><input type="radio" name="q5" value="B"><span><strong>B)</strong> String nome = "Ana";</span></label>
+<label class="option-label"><input type="radio" name="q5" value="C"><span><strong>C)</strong> char nome = "Ana";</span></label>
+<label class="option-label"><input type="radio" name="q5" value="D"><span><strong>D)</strong> text nome = "Ana";</span></label>
+<label class="option-label"><input type="radio" name="q5" value="E"><span><strong>E)</strong> String nome = 'Ana';</span></label></div></div><div class="question-box mc-question" data-answer="C"><div class="question-title"><span class="question-number">Questão 06</span> O que acontece na divisão inteira int resultado = 7 / 2; em Java?</div><div class="options-list"><label class="option-label"><input type="radio" name="q6" value="A"><span><strong>A)</strong> Armazena 3.5</span></label>
+<label class="option-label"><input type="radio" name="q6" value="B"><span><strong>B)</strong> Armazena 4</span></label>
+<label class="option-label"><input type="radio" name="q6" value="C"><span><strong>C)</strong> Armazena 3 (a parte decimal é descartada)</span></label>
+<label class="option-label"><input type="radio" name="q6" value="D"><span><strong>D)</strong> Armazena 1</span></label>
+<label class="option-label"><input type="radio" name="q6" value="E"><span><strong>E)</strong> Gera erro de execução</span></label></div></div><div class="question-box mc-question" data-answer="C"><div class="question-title"><span class="question-number">Questão 07</span> Qual operador lógico representa o 'OU' (basta uma condição ser verdadeira)?</div><div class="options-list"><label class="option-label"><input type="radio" name="q7" value="A"><span><strong>A)</strong> &&</span></label>
+<label class="option-label"><input type="radio" name="q7" value="B"><span><strong>B)</strong> !</span></label>
+<label class="option-label"><input type="radio" name="q7" value="C"><span><strong>C)</strong> ||</span></label>
+<label class="option-label"><input type="radio" name="q7" value="D"><span><strong>D)</strong> ==</span></label>
+<label class="option-label"><input type="radio" name="q7" value="E"><span><strong>E)</strong> !=</span></label></div></div><div class="question-box mc-question" data-answer="C"><div class="question-title"><span class="question-number">Questão 08</span> Qual método do objeto Scanner lê um número inteiro digitado pelo usuário?</div><div class="options-list"><label class="option-label"><input type="radio" name="q8" value="A"><span><strong>A)</strong> sc.nextDouble()</span></label>
+<label class="option-label"><input type="radio" name="q8" value="B"><span><strong>B)</strong> sc.nextLine()</span></label>
+<label class="option-label"><input type="radio" name="q8" value="C"><span><strong>C)</strong> sc.nextInt()</span></label>
+<label class="option-label"><input type="radio" name="q8" value="D"><span><strong>D)</strong> sc.readInt()</span></label>
+<label class="option-label"><input type="radio" name="q8" value="E"><span><strong>E)</strong> sc.getInteger()</span></label></div></div><div class="question-box"><div class="question-title"><span class="question-number">Questão 09 • Prática</span> Escreva um programa Java completo chamado CalculadoraMedia que leia duas notas decimais (double) digitadas pelo usuário via Scanner, calcule a média aritmética e exiba o resultado.</div><textarea class="code-writing-area" placeholder="Escreva aqui o código Java completo..."></textarea><div class="solution-toggle"><button type="button" class="btn" onclick="toggleSolucao(this)">Ver Sugestão de Código</button><div class="solution-box"><strong>Sugestão de implementação em Java:</strong><div class="code-wrapper"><div class="code-header"><span>Solução Exemplo</span><span>Java</span></div><pre>import java.util.Scanner;
+
+public class CalculadoraMedia {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Digite a primeira nota: ");
+        double nota1 = sc.nextDouble();
+
+        System.out.print("Digite a segunda nota: ");
+        double nota2 = sc.nextDouble();
+
+        double media = (nota1 + nota2) / 2.0;
+        System.out.println("Média final: " + media);
+
+        sc.close();
+    }
+}</pre></div></div></div></div><div class="question-box"><div class="question-title"><span class="question-number">Questão 10 • Prática</span> Escreva um programa Java completo chamado ConversorTemperatura que leia uma temperatura em graus Celsius e exiba o valor equivalente em Fahrenheit usando a fórmula: F = (C * 9 / 5) + 32.</div><textarea class="code-writing-area" placeholder="Escreva aqui o código Java completo..."></textarea><div class="solution-toggle"><button type="button" class="btn" onclick="toggleSolucao(this)">Ver Sugestão de Código</button><div class="solution-box"><strong>Sugestão de implementação em Java:</strong><div class="code-wrapper"><div class="code-header"><span>Solução Exemplo</span><span>Java</span></div><pre>import java.util.Scanner;
+
+public class ConversorTemperatura {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Temperatura em Celsius: ");
+        double celsius = sc.nextDouble();
+
+        double fahrenheit = (celsius * 9.0 / 5.0) + 32.0;
+        System.out.println("Temperatura em Fahrenheit: " + fahrenheit);
+
+        sc.close();
+    }
+}</pre></div></div></div></div>
+    <div class="quiz-actions">
+      <button type="button" class="btn btn-orange" onclick="verificarRespostas('form-m2', 'fb-m2')">Verificar Respostas Objetivas</button>
+      <button type="button" class="btn" onclick="limparRespostas('form-m2', 'fb-m2')">Limpar Respostas</button>
+      <span id="fb-m2" class="quiz-feedback"></span>
+    </div>
+  </form>
+</section>
+
+<div class="page-nav-footer">
+  <a href="modulo1.html" class="btn">&larr; Anterior: Módulo I</a>
+  <a href="modulo3.html" class="btn btn-orange">Próximo: Módulo III &rarr;</a>
+</div>
+
+  </main>
+
+  <footer>
+    <p><strong>Curso Completo de Lógica de Programação com Java Básico</strong></p>
+    <p>Apostila Interativa • 6 Módulos • 60 Exercícios de Fixação • Avaliação Final</p>
+  </footer>
+  <script src="script.js"></script>
+    
+</body>
+</html>

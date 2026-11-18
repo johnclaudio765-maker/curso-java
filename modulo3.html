@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo III - Estruturas Condicionais | Lógica de Programação com Java Básico</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="brand">
+        <span class="brand-badge">JAVA</span>
+        <span>Lógica de Programação</span>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="">Início & Plano</a></li>
+<li><a href="modulo1.html" class="">Módulo I</a></li>
+<li><a href="modulo2.html" class="">Módulo II</a></li>
+<li><a href="modulo3.html" class="active">Módulo III</a></li>
+<li><a href="modulo4.html" class="">Módulo IV</a></li>
+<li><a href="modulo5.html" class="">Módulo V</a></li>
+<li><a href="modulo6.html" class="">Módulo VI</a></li>
+<li><a href="avaliacao.html" class="">Avaliação Final</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-container">
+    
+<div class="chapter-separator">
+  <div class="chapter-line"></div>
+  <div class="chapter-badge">Módulo III</div>
+  <div class="chapter-line right"></div>
+</div>
+
+<section class="module-intro-card">
+  <h1>Estruturas Condicionais (Tomada de Decisão)</h1>
+  <p>
+    Programas inteligentes precisam escolher caminhos diferentes dependendo dos dados recebidos. Neste módulo, vamos dominar o <code class="inline">if</code>, <code class="inline">else if</code>, <code class="inline">else</code> e o <code class="inline">switch-case</code>.
+  </p>
+  <div class="exercise-notice">
+    Atenção: Este módulo contém 10 questões ao final (8 objetivas e 2 práticas de código).
+  </div>
+</section>
+
+<div class="title-balloon">1. Condicionais Simples, Compostas e Encadeadas</div>
+<section class="content-card">
+  <p>
+    A estrutura <code class="inline">if</code> avalia uma expressão lógica entre parênteses. Se o resultado for <code class="inline">true</code>, o bloco de chaves é executado. Caso contrário, o programa segue para o <code class="inline">else if</code> ou <code class="inline">else</code>.
+  </p>
+
+  <div class="code-wrapper">
+    <div class="code-header"><span>ClassificacaoIdade.java</span><span>if / else if / else</span></div>
+    <pre>int idade = 20;
+
+if (idade < 12) {
+    System.out.println("Criança");
+} else if (idade < 18) {
+    System.out.println("Adolescente");
+} else {
+    System.out.println("Adulto");
+}</pre>
+  </div>
+</section>
+
+<div class="title-balloon">2. Escolha Múltipla com switch-case</div>
+<section class="content-card">
+  <p>
+    Quando precisamos comparar uma mesma variável contra vários valores fixos (como opções de menu ou dias da semana), o <code class="inline">switch</code> deixa o código muito mais limpo e legível.
+  </p>
+
+  <div class="code-wrapper">
+    <div class="code-header"><span>DiaSemana.java</span><span>Estrutura switch</span></div>
+    <pre>int dia = 3;
+
+switch (dia) {
+    case 1:
+        System.out.println("Domingo");
+        break;
+    case 2:
+        System.out.println("Segunda-feira");
+        break;
+    case 3:
+        System.out.println("Terça-feira");
+        break;
+    default:
+        System.out.println("Outro dia da semana");
+        break;
+}</pre>
+  </div>
+
+  <div class="professor-tip">
+    <strong>Cuidado com Strings:</strong>
+    Nunca compare o conteúdo de textos (<code class="inline">String</code>) usando <code class="inline">==</code>. Use sempre <code class="inline">texto1.equals(texto2)</code> ou <code class="inline">texto1.equalsIgnoreCase(texto2)</code>.
+  </div>
+</section>
+
+<div class="title-balloon orange">Exercícios do Módulo III (10 Questões)</div>
+<section class="exercise-section">
+  <form id="form-m3">
+    <div class="question-box mc-question" data-answer="B"><div class="question-title"><span class="question-number">Questão 01</span> Qual palavra-chave em Java define um bloco alternativo executado quando a condição do if é falsa?</div><div class="options-list"><label class="option-label"><input type="radio" name="q1" value="A"><span><strong>A)</strong> then</span></label>
+<label class="option-label"><input type="radio" name="q1" value="B"><span><strong>B)</strong> else</span></label>
+<label class="option-label"><input type="radio" name="q1" value="C"><span><strong>C)</strong> otherwise</span></label>
+<label class="option-label"><input type="radio" name="q1" value="D"><span><strong>D)</strong> when</span></label>
+<label class="option-label"><input type="radio" name="q1" value="E"><span><strong>E)</strong> loop</span></label></div></div><div class="question-box mc-question" data-answer="B"><div class="question-title"><span class="question-number">Questão 02</span> O que será impresso no console pelo código abaixo?</div><div class="code-wrapper"><div class="code-header"><span>Trecho Java</span><span>Analise o código</span></div><pre>double nota = 6.0;
+if (nota >= 7.0) {
+    System.out.println("Aprovado");
+} else if (nota >= 5.0) {
+    System.out.println("Recuperação");
+} else {
+    System.out.println("Reprovado");
+}</pre></div><div class="options-list"><label class="option-label"><input type="radio" name="q2" value="A"><span><strong>A)</strong> Aprovado</span></label>
+<label class="option-label"><input type="radio" name="q2" value="B"><span><strong>B)</strong> Recuperação</span></label>
+<label class="option-label"><input type="radio" name="q2" value="C"><span><strong>C)</strong> Reprovado</span></label>
+<label class="option-label"><input type="radio" name="q2" value="D"><span><strong>D)</strong> Aprovado e Recuperação</span></label>
+<label class="option-label"><input type="radio" name="q2" value="E"><span><strong>E)</strong> Nada será impresso</span></label></div></div><div class="question-box mc-question" data-answer="C"><div class="question-title"><span class="question-number">Questão 03</span> Em uma estrutura switch-case tradicional, qual comando evita que a execução continue descendo para os casos seguintes?</div><div class="options-list"><label class="option-label"><input type="radio" name="q3" value="A"><span><strong>A)</strong> stop;</span></label>
+<label class="option-label"><input type="radio" name="q3" value="B"><span><strong>B)</strong> exit;</span></label>
+<label class="option-label"><input type="radio" name="q3" value="C"><span><strong>C)</strong> break;</span></label>
+<label class="option-label"><input type="radio" name="q3" value="D"><span><strong>D)</strong> return 0;</span></label>
+<label class="option-label"><input type="radio" name="q3" value="E"><span><strong>E)</strong> continue;</span></label></div></div><div class="question-box mc-question" data-answer="D"><div class="question-title"><span class="question-number">Questão 04</span> Qual cláusula dentro do switch é executada quando nenhum dos valores de case corresponde à variável testada?</div><div class="options-list"><label class="option-label"><input type="radio" name="q4" value="A"><span><strong>A)</strong> else</span></label>
+<label class="option-label"><input type="radio" name="q4" value="B"><span><strong>B)</strong> other</span></label>
+<label class="option-label"><input type="radio" name="q4" value="C"><span><strong>C)</strong> fallback</span></label>
+<label class="option-label"><input type="radio" name="q4" value="D"><span><strong>D)</strong> default</span></label>
+<label class="option-label"><input type="radio" name="q4" value="E"><span><strong>E)</strong> none</span></label></div></div><div class="question-box mc-question" data-answer="B"><div class="question-title"><span class="question-number">Questão 05</span> Como verificamos corretamente se um número inteiro n é PAR em Java?</div><div class="options-list"><label class="option-label"><input type="radio" name="q5" value="A"><span><strong>A)</strong> if (n / 2 == 0)</span></label>
+<label class="option-label"><input type="radio" name="q5" value="B"><span><strong>B)</strong> if (n % 2 == 0)</span></label>
+<label class="option-label"><input type="radio" name="q5" value="C"><span><strong>C)</strong> if (n % 2 == 1)</span></label>
+<label class="option-label"><input type="radio" name="q5" value="D"><span><strong>D)</strong> if (n == 2)</span></label>
+<label class="option-label"><input type="radio" name="q5" value="E"><span><strong>E)</strong> if (n * 2 == 0)</span></label></div></div><div class="question-box mc-question" data-answer="C"><div class="question-title"><span class="question-number">Questão 06</span> Para comparar se o conteúdo de duas variáveis do tipo String (s1 e s2) é igual em Java, qual é a forma recomendada?</div><div class="options-list"><label class="option-label"><input type="radio" name="q6" value="A"><span><strong>A)</strong> s1 == s2</span></label>
+<label class="option-label"><input type="radio" name="q6" value="B"><span><strong>B)</strong> s1 = s2</span></label>
+<label class="option-label"><input type="radio" name="q6" value="C"><span><strong>C)</strong> s1.equals(s2)</span></label>
+<label class="option-label"><input type="radio" name="q6" value="D"><span><strong>D)</strong> s1.compare(s2)</span></label>
+<label class="option-label"><input type="radio" name="q6" value="E"><span><strong>E)</strong> s1 != s2</span></label></div></div><div class="question-box mc-question" data-answer="B"><div class="question-title"><span class="question-number">Questão 07</span> Qual é o resultado da expressão ternária: String status = (18 >= 18) ? "Maior" : "Menor";</div><div class="options-list"><label class="option-label"><input type="radio" name="q7" value="A"><span><strong>A)</strong> "Menor"</span></label>
+<label class="option-label"><input type="radio" name="q7" value="B"><span><strong>B)</strong> "Maior"</span></label>
+<label class="option-label"><input type="radio" name="q7" value="C"><span><strong>C)</strong> true</span></label>
+<label class="option-label"><input type="radio" name="q7" value="D"><span><strong>D)</strong> 18</span></label>
+<label class="option-label"><input type="radio" name="q7" value="E"><span><strong>E)</strong> Erro de sintaxe</span></label></div></div><div class="question-box mc-question" data-answer="C"><div class="question-title"><span class="question-number">Questão 08</span> Qual condição testa se uma variável idade está entre 18 e 65 anos (inclusive)?</div><div class="options-list"><label class="option-label"><input type="radio" name="q8" value="A"><span><strong>A)</strong> idade >= 18 || idade <= 65</span></label>
+<label class="option-label"><input type="radio" name="q8" value="B"><span><strong>B)</strong> idade > 18 && idade < 65</span></label>
+<label class="option-label"><input type="radio" name="q8" value="C"><span><strong>C)</strong> idade >= 18 && idade <= 65</span></label>
+<label class="option-label"><input type="radio" name="q8" value="D"><span><strong>D)</strong> 18 <= idade <= 65</span></label>
+<label class="option-label"><input type="radio" name="q8" value="E"><span><strong>E)</strong> idade == 18 && idade == 65</span></label></div></div><div class="question-box"><div class="question-title"><span class="question-number">Questão 09 • Prática</span> Escreva um programa Java completo chamado VerificadorParImpar que leia um número inteiro digitado pelo usuário e informe se ele é 'Par' ou 'Ímpar'.</div><textarea class="code-writing-area" placeholder="Escreva aqui o código Java completo..."></textarea><div class="solution-toggle"><button type="button" class="btn" onclick="toggleSolucao(this)">Ver Sugestão de Código</button><div class="solution-box"><strong>Sugestão de implementação em Java:</strong><div class="code-wrapper"><div class="code-header"><span>Solução Exemplo</span><span>Java</span></div><pre>import java.util.Scanner;
+
+public class VerificadorParImpar {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Digite um número inteiro: ");
+        int numero = sc.nextInt();
+
+        if (numero % 2 == 0) {
+            System.out.println("O número " + numero + " é Par.");
+        } else {
+            System.out.println("O número " + numero + " é Ímpar.");
+        }
+
+        sc.close();
+    }
+}</pre></div></div></div></div><div class="question-box"><div class="question-title"><span class="question-number">Questão 10 • Prática</span> Escreva um programa Java completo chamado MenuBebidas que leia um número de 1 a 3 e, usando switch-case, imprima: 1 - 'Café', 2 - 'Chá', 3 - 'Suco Natural', ou 'Opção inválida' para outros valores.</div><textarea class="code-writing-area" placeholder="Escreva aqui o código Java completo..."></textarea><div class="solution-toggle"><button type="button" class="btn" onclick="toggleSolucao(this)">Ver Sugestão de Código</button><div class="solution-box"><strong>Sugestão de implementação em Java:</strong><div class="code-wrapper"><div class="code-header"><span>Solução Exemplo</span><span>Java</span></div><pre>import java.util.Scanner;
+
+public class MenuBebidas {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Escolha uma opção (1-Café, 2-Chá, 3-Suco): ");
+        int opcao = sc.nextInt();
+
+        switch (opcao) {
+            case 1:
+                System.out.println("Café");
+                break;
+            case 2:
+                System.out.println("Chá");
+                break;
+            case 3:
+                System.out.println("Suco Natural");
+                break;
+            default:
+                System.out.println("Opção inválida");
+                break;
+        }
+
+        sc.close();
+    }
+}</pre></div></div></div></div>
+    <div class="quiz-actions">
+      <button type="button" class="btn btn-orange" onclick="verificarRespostas('form-m3', 'fb-m3')">Verificar Respostas Objetivas</button>
+      <button type="button" class="btn" onclick="limparRespostas('form-m3', 'fb-m3')">Limpar Respostas</button>
+      <span id="fb-m3" class="quiz-feedback"></span>
+    </div>
+  </form>
+</section>
+
+<div class="page-nav-footer">
+  <a href="modulo2.html" class="btn">&larr; Anterior: Módulo II</a>
+  <a href="modulo4.html" class="btn btn-orange">Próximo: Módulo IV &rarr;</a>
+</div>
+
+  </main>
+
+  <footer>
+    <p><strong>Curso Completo de Lógica de Programação com Java Básico</strong></p>
+    <p>Apostila Interativa • 6 Módulos • 60 Exercícios de Fixação • Avaliação Final</p>
+  </footer>
+  <script src="script.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo VI - Métodos e Modularização | Lógica de Programação com Java Básico</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="brand">
+        <span class="brand-badge">JAVA</span>
+        <span>Lógica de Programação</span>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="">Início & Plano</a></li>
+<li><a href="modulo1.html" class="">Módulo I</a></li>
+<li><a href="modulo2.html" class="">Módulo II</a></li>
+<li><a href="modulo3.html" class="">Módulo III</a></li>
+<li><a href="modulo4.html" class="">Módulo IV</a></li>
+<li><a href="modulo5.html" class="">Módulo V</a></li>
+<li><a href="modulo6.html" class="active">Módulo VI</a></li>
+<li><a href="avaliacao.html" class="">Avaliação Final</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-container">
+    
+<div class="chapter-separator">
+  <div class="chapter-line"></div>
+  <div class="chapter-badge">Módulo VI</div>
+  <div class="chapter-line right"></div>
+</div>
+
+<section class="module-intro-card">
+  <h1>Métodos (Funções) e Modularização</h1>
+  <p>
+    À medida que nossos programas crescem, colocar tudo dentro do <code class="inline">main</code> torna o código confuso. Neste módulo, aprenderemos a dividir problemas grandes em pequenas peças reutilizáveis chamadas <strong>métodos</strong>.
+  </p>
+  <div class="exercise-notice">
+    Atenção: Este módulo contém 10 questões ao final (8 objetivas e 2 práticas de código).
+  </div>
+</section>
+
+<div class="title-balloon">1. Anatomia de um Método em Java</div>
+<section class="content-card">
+  <p>
+    Um método possui um <strong>tipo de retorno</strong> (ou <code class="inline">void</code> quando não devolve nada), um <strong>nome</strong> (em camelCase) e uma lista de <strong>parâmetros</strong> entre parênteses.
+  </p>
+
+  <div class="code-wrapper">
+    <div class="code-header"><span>ExemploMetodos.java</span><span>void e com retorno</span></div>
+    <pre>public class ExemploMetodos {
+
+    // Método sem retorno (void)
+    public static void exibirSaudacao(String nome) {
+        System.out.println("Olá, " + nome + "! Bons estudos em Java.");
+    }
+
+    // Método com retorno (int)
+    public static int somar(int a, int b) {
+        return a + b;
+    }
+
+    public static void main(String[] args) {
+        exibirSaudacao("Carlos");
+        int resultado = somar(12, 8);
+        System.out.println("Resultado da soma: " + resultado);
+    }
+}</pre>
+  </div>
+</section>
+
+<div class="title-balloon orange">Exercícios do Módulo VI (10 Questões)</div>
+<section class="exercise-section">
+  <form id="form-m6">
+    <div class="question-box mc-question" data-answer="C"><div class="question-title"><span class="question-number">Questão 01</span> Qual palavra-chave indica que um método em Java executa uma tarefa mas NÃO retorna nenhum valor?</div><div class="options-list"><label class="option-label"><input type="radio" name="q1" value="A"><span><strong>A)</strong> null</span></label>
+<label class="option-label"><input type="radio" name="q1" value="B"><span><strong>B)</strong> empty</span></label>
+<label class="option-label"><input type="radio" name="q1" value="C"><span><strong>C)</strong> void</span></label>
+<label class="option-label"><input type="radio" name="q1" value="D"><span><strong>D)</strong> none</span></label>
+<label class="option-label"><input type="radio" name="q1" value="E"><span><strong>E)</strong> return</span></label></div></div><div class="question-box mc-question" data-answer="C"><div class="question-title"><span class="question-number">Questão 02</span> Qual comando é usado dentro de um método não-void para devolver o resultado calculado a quem o chamou?</div><div class="options-list"><label class="option-label"><input type="radio" name="q2" value="A"><span><strong>A)</strong> send</span></label>
+<label class="option-label"><input type="radio" name="q2" value="B"><span><strong>B)</strong> output</span></label>
+<label class="option-label"><input type="radio" name="q2" value="C"><span><strong>C)</strong> return</span></label>
+<label class="option-label"><input type="radio" name="q2" value="D"><span><strong>D)</strong> yield</span></label>
+<label class="option-label"><input type="radio" name="q2" value="E"><span><strong>E)</strong> give</span></label></div></div><div class="question-box mc-question" data-answer="B"><div class="question-title"><span class="question-number">Questão 03</span> O que são parâmetros em um método Java?</div><div class="options-list"><label class="option-label"><input type="radio" name="q3" value="A"><span><strong>A)</strong> Os comentários escritos acima da classe.</span></label>
+<label class="option-label"><input type="radio" name="q3" value="B"><span><strong>B)</strong> As variáveis declaradas nos parênteses do método para receber valores de entrada.</span></label>
+<label class="option-label"><input type="radio" name="q3" value="C"><span><strong>C)</strong> Os erros exibidos no console.</span></label>
+<label class="option-label"><input type="radio" name="q3" value="D"><span><strong>D)</strong> Apenas variáveis globais do sistema operacional.</span></label>
+<label class="option-label"><input type="radio" name="q3" value="E"><span><strong>E)</strong> As chaves que fecham o programa.</span></label></div></div><div class="question-box mc-question" data-answer="C"><div class="question-title"><span class="question-number">Questão 04</span> O que será impresso ao executar o código abaixo?</div><div class="code-wrapper"><div class="code-header"><span>Trecho Java</span><span>Analise o código</span></div><pre>public static int quadrado(int n) {
+    return n * n;
+}
+public static void main(String[] args) {
+    System.out.println(quadrado(5));
+}</pre></div><div class="options-list"><label class="option-label"><input type="radio" name="q4" value="A"><span><strong>A)</strong> 5</span></label>
+<label class="option-label"><input type="radio" name="q4" value="B"><span><strong>B)</strong> 10</span></label>
+<label class="option-label"><input type="radio" name="q4" value="C"><span><strong>C)</strong> 25</span></label>
+<label class="option-label"><input type="radio" name="q4" value="D"><span><strong>D)</strong> 0</span></label>
+<label class="option-label"><input type="radio" name="q4" value="E"><span><strong>E)</strong> Erro de compilação</span></label></div></div><div class="question-box mc-question" data-answer="A"><div class="question-title"><span class="question-number">Questão 05</span> Qual é a principal vantagem de modularizar um programa dividindo-o em métodos?</div><div class="options-list"><label class="option-label"><input type="radio" name="q5" value="A"><span><strong>A)</strong> Reutilização de código, facilidade de leitura e manutenção mais simples.</span></label>
+<label class="option-label"><input type="radio" name="q5" value="B"><span><strong>B)</strong> Impedir que o usuário digite dados no teclado.</span></label>
+<label class="option-label"><input type="radio" name="q5" value="C"><span><strong>C)</strong> Aumentar propositalmente o número de linhas repetidas.</span></label>
+<label class="option-label"><input type="radio" name="q5" value="D"><span><strong>D)</strong> Eliminar a necessidade do método main.</span></label>
+<label class="option-label"><input type="radio" name="q5" value="E"><span><strong>E)</strong> Fazer o programa rodar sem JVM.</span></label></div></div><div class="question-box mc-question" data-answer="B"><div class="question-title"><span class="question-number">Questão 06</span> O que significa sobrecarga de métodos (Method Overloading) em Java?</div><div class="options-list"><label class="option-label"><input type="radio" name="q6" value="A"><span><strong>A)</strong> Quando o computador trava por excesso de memória.</span></label>
+<label class="option-label"><input type="radio" name="q6" value="B"><span><strong>B)</strong> Ter dois ou mais métodos com o mesmo nome na mesma classe, mas com listas de parâmetros diferentes.</span></label>
+<label class="option-label"><input type="radio" name="q6" value="C"><span><strong>C)</strong> Apagar um método antigo.</span></label>
+<label class="option-label"><input type="radio" name="q6" value="D"><span><strong>D)</strong> Chamar um método sem parênteses.</span></label>
+<label class="option-label"><input type="radio" name="q6" value="E"><span><strong>E)</strong> Criar duas classes com o mesmo nome no mesmo pacote.</span></label></div></div><div class="question-box mc-question" data-answer="B"><div class="question-title"><span class="question-number">Questão 07</span> Para chamar um método auxiliar diretamente a partir de public static void main(String[] args) na mesma classe sem criar objetos, qual modificador esse método precisa ter?</div><div class="options-list"><label class="option-label"><input type="radio" name="q7" value="A"><span><strong>A)</strong> void</span></label>
+<label class="option-label"><input type="radio" name="q7" value="B"><span><strong>B)</strong> static</span></label>
+<label class="option-label"><input type="radio" name="q7" value="C"><span><strong>C)</strong> final</span></label>
+<label class="option-label"><input type="radio" name="q7" value="D"><span><strong>D)</strong> abstract</span></label>
+<label class="option-label"><input type="radio" name="q7" value="E"><span><strong>E)</strong> package</span></label></div></div><div class="question-box mc-question" data-answer="B"><div class="question-title"><span class="question-number">Questão 08</span> O que acontece com uma variável declarada dentro de um método (variável local) quando o método termina sua execução?</div><div class="options-list"><label class="option-label"><input type="radio" name="q8" value="A"><span><strong>A)</strong> Ela fica salva para sempre no disco rígido.</span></label>
+<label class="option-label"><input type="radio" name="q8" value="B"><span><strong>B)</strong> Ela deixa de existir (seu escopo é restrito àquele método).</span></label>
+<label class="option-label"><input type="radio" name="q8" value="C"><span><strong>C)</strong> Ela passa a valer em todas as outras classes.</span></label>
+<label class="option-label"><input type="radio" name="q8" value="D"><span><strong>D)</strong> Ela é impressa automaticamente na tela.</span></label>
+<label class="option-label"><input type="radio" name="q8" value="E"><span><strong>E)</strong> Ela vira uma constante.</span></label></div></div><div class="question-box"><div class="question-title"><span class="question-number">Questão 09 • Prática</span> Escreva um programa Java completo chamado CalculoArea que possua um método público e estático chamado calcularAreaRetangulo(double base, double altura) que retorne a área, e teste esse método no main.</div><textarea class="code-writing-area" placeholder="Escreva aqui o código Java completo..."></textarea><div class="solution-toggle"><button type="button" class="btn" onclick="toggleSolucao(this)">Ver Sugestão de Código</button><div class="solution-box"><strong>Sugestão de implementação em Java:</strong><div class="code-wrapper"><div class="code-header"><span>Solução Exemplo</span><span>Java</span></div><pre>public class CalculoArea {
+
+    public static double calcularAreaRetangulo(double base, double altura) {
+        return base * altura;
+    }
+
+    public static void main(String[] args) {
+        double area = calcularAreaRetangulo(5.0, 4.0);
+        System.out.println("Área do retângulo: " + area);
+    }
+}</pre></div></div></div></div><div class="question-box"><div class="question-title"><span class="question-number">Questão 10 • Prática</span> Escreva um programa Java completo chamado VerificadorPrimo com um método público e estático boolean ehPrimo(int numero) que retorne true se o número for primo e false caso contrário. Chame-o no main.</div><textarea class="code-writing-area" placeholder="Escreva aqui o código Java completo..."></textarea><div class="solution-toggle"><button type="button" class="btn" onclick="toggleSolucao(this)">Ver Sugestão de Código</button><div class="solution-box"><strong>Sugestão de implementação em Java:</strong><div class="code-wrapper"><div class="code-header"><span>Solução Exemplo</span><span>Java</span></div><pre>public class VerificadorPrimo {
+
+    public static boolean ehPrimo(int numero) {
+        if (numero <= 1) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(numero); i++) {
+            if (numero % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+        int n = 17;
+        System.out.println(n + " é primo? " + ehPrimo(n));
+    }
+}</pre></div></div></div></div>
+    <div class="quiz-actions">
+      <button type="button" class="btn btn-orange" onclick="verificarRespostas('form-m6', 'fb-m6')">Verificar Respostas Objetivas</button>
+      <button type="button" class="btn" onclick="limparRespostas('form-m6', 'fb-m6')">Limpar Respostas</button>
+      <span id="fb-m6" class="quiz-feedback"></span>
+    </div>
+  </form>
+</section>
+
+<div class="page-nav-footer">
+  <a href="modulo5.html" class="btn">&larr; Anterior: Módulo V</a>
+  <a href="avaliacao.html" class="btn btn-orange">Ir para Avaliação Final &rarr;</a>
+</div>
+
+  </main>
+
+  <footer>
+    <p><strong>Curso Completo de Lógica de Programação com Java Básico</strong></p>
+    <p>Apostila Interativa • 6 Módulos • 60 Exercícios de Fixação • Avaliação Final</p>
+  </footer>
+  <script src="script.js"></script>
+    
+</body>
+</html>

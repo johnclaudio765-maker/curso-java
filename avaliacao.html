@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avaliação Final | Lógica de Programação com Java Básico</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="brand">
+        <span class="brand-badge">JAVA</span>
+        <span>Lógica de Programação</span>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="">Início & Plano</a></li>
+<li><a href="modulo1.html" class="">Módulo I</a></li>
+<li><a href="modulo2.html" class="">Módulo II</a></li>
+<li><a href="modulo3.html" class="">Módulo III</a></li>
+<li><a href="modulo4.html" class="">Módulo IV</a></li>
+<li><a href="modulo5.html" class="">Módulo V</a></li>
+<li><a href="modulo6.html" class="">Módulo VI</a></li>
+<li><a href="avaliacao.html" class="active">Avaliação Final</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-container">
+    
+<div class="chapter-separator">
+  <div class="chapter-line"></div>
+  <div class="chapter-badge">Avaliação Final</div>
+  <div class="chapter-line right"></div>
+</div>
+
+<section class="module-intro-card">
+  <h1>Avaliação Final de Lógica de Programação com Java Básico</h1>
+  <p>
+    Parabéns por chegar até aqui! Esta avaliação reúne os conceitos dos 6 módulos em <strong>10 questões fechadas (A a E)</strong> e <strong>2 desafios abertos de escrita completa de código Java</strong>.
+  </p>
+  <div class="exercise-notice">
+    Estrutura da Avaliação: 10 Questões Objetivas (A a E) + 2 Questões Práticas de Código.
+  </div>
+</section>
+
+<div class="title-balloon orange">Questões da Avaliação Final (12 Questões)</div>
+<section class="exercise-section">
+  <form id="form-av">
+    <div class="question-box mc-question" data-answer="B"><div class="question-title"><span class="question-number">Questão 01</span> Qual componente do Java é responsável por transformar o código-fonte (.java) em bytecode (.class)?</div><div class="options-list"><label class="option-label"><input type="radio" name="q1" value="A"><span><strong>A)</strong> JVM (Java Virtual Machine)</span></label>
+<label class="option-label"><input type="radio" name="q1" value="B"><span><strong>B)</strong> Compilador javac (presente no JDK)</span></label>
+<label class="option-label"><input type="radio" name="q1" value="C"><span><strong>C)</strong> Classe Scanner</span></label>
+<label class="option-label"><input type="radio" name="q1" value="D"><span><strong>D)</strong> Sistema Operacional</span></label>
+<label class="option-label"><input type="radio" name="q1" value="E"><span><strong>E)</strong> Operador módulo (%)</span></label></div></div><div class="question-box mc-question" data-answer="B"><div class="question-title"><span class="question-number">Questão 02</span> Considere as declarações: int a = 9; int b = 2; double c = a / b; Qual será o valor armazenado em c?</div><div class="options-list"><label class="option-label"><input type="radio" name="q2" value="A"><span><strong>A)</strong> 4.5</span></label>
+<label class="option-label"><input type="radio" name="q2" value="B"><span><strong>B)</strong> 4.0</span></label>
+<label class="option-label"><input type="radio" name="q2" value="C"><span><strong>C)</strong> 5.0</span></label>
+<label class="option-label"><input type="radio" name="q2" value="D"><span><strong>D)</strong> 1.0</span></label>
+<label class="option-label"><input type="radio" name="q2" value="E"><span><strong>E)</strong> Erro de compilação</span></label></div></div><div class="question-box mc-question" data-answer="B"><div class="question-title"><span class="question-number">Questão 03</span> Qual será a saída produzida pelo bloco condicional abaixo?</div><div class="code-wrapper"><div class="code-header"><span>Trecho Java</span><span>Analise o código</span></div><pre>int idade = 16;
+boolean temAutorizacao = false;
+if (idade >= 18 || temAutorizacao) {
+    System.out.println("Acesso Liberado");
+} else {
+    System.out.println("Acesso Negado");
+}</pre></div><div class="options-list"><label class="option-label"><input type="radio" name="q3" value="A"><span><strong>A)</strong> Acesso Liberado</span></label>
+<label class="option-label"><input type="radio" name="q3" value="B"><span><strong>B)</strong> Acesso Negado</span></label>
+<label class="option-label"><input type="radio" name="q3" value="C"><span><strong>C)</strong> Senha Incorreta</span></label>
+<label class="option-label"><input type="radio" name="q3" value="D"><span><strong>D)</strong> Acesso Liberado e Acesso Negado</span></label>
+<label class="option-label"><input type="radio" name="q3" value="E"><span><strong>E)</strong> Nenhuma saída</span></label></div></div><div class="question-box mc-question" data-answer="B"><div class="question-title"><span class="question-number">Questão 04</span> Quantas vezes o texto 'Execução' será exibido pelo laço do-while abaixo?</div><div class="code-wrapper"><div class="code-header"><span>Trecho Java</span><span>Analise o código</span></div><pre>int x = 10;
+do {
+    System.out.println("Execução");
+    x++;
+} while (x < 5);</pre></div><div class="options-list"><label class="option-label"><input type="radio" name="q4" value="A"><span><strong>A)</strong> 0 vezes</span></label>
+<label class="option-label"><input type="radio" name="q4" value="B"><span><strong>B)</strong> 1 vez</span></label>
+<label class="option-label"><input type="radio" name="q4" value="C"><span><strong>C)</strong> 5 vezes</span></label>
+<label class="option-label"><input type="radio" name="q4" value="D"><span><strong>D)</strong> 10 vezes</span></label>
+<label class="option-label"><input type="radio" name="q4" value="E"><span><strong>E)</strong> Infinitas vezes</span></label></div></div><div class="question-box mc-question" data-answer="C"><div class="question-title"><span class="question-number">Questão 05</span> Qual será o valor impresso ao final da execução deste laço for?</div><div class="code-wrapper"><div class="code-header"><span>Trecho Java</span><span>Analise o código</span></div><pre>int total = 0;
+for (int i = 0; i <= 4; i += 2) {
+    total += i;
+}
+System.out.println(total);</pre></div><div class="options-list"><label class="option-label"><input type="radio" name="q5" value="A"><span><strong>A)</strong> 2</span></label>
+<label class="option-label"><input type="radio" name="q5" value="B"><span><strong>B)</strong> 4</span></label>
+<label class="option-label"><input type="radio" name="q5" value="C"><span><strong>C)</strong> 6</span></label>
+<label class="option-label"><input type="radio" name="q5" value="D"><span><strong>D)</strong> 8</span></label>
+<label class="option-label"><input type="radio" name="q5" value="E"><span><strong>E)</strong> 10</span></label></div></div><div class="question-box mc-question" data-answer="B"><div class="question-title"><span class="question-number">Questão 06</span> Dado o vetor int[] dados = {5, 10, 15, 20, 25};, qual expressão resulta no valor 25?</div><div class="options-list"><label class="option-label"><input type="radio" name="q6" value="A"><span><strong>A)</strong> dados[5]</span></label>
+<label class="option-label"><input type="radio" name="q6" value="B"><span><strong>B)</strong> dados[4]</span></label>
+<label class="option-label"><input type="radio" name="q6" value="C"><span><strong>C)</strong> dados[3]</span></label>
+<label class="option-label"><input type="radio" name="q6" value="D"><span><strong>D)</strong> dados.length</span></label>
+<label class="option-label"><input type="radio" name="q6" value="E"><span><strong>E)</strong> dados[0]</span></label></div></div><div class="question-box mc-question" data-answer="B"><div class="question-title"><span class="question-number">Questão 07</span> Em Java, qual estrutura é mais adequada para testar uma variável inteira opcao contra os valores fixos 1, 2, 3 e 4 sem encadear vários else if?</div><div class="options-list"><label class="option-label"><input type="radio" name="q7" value="A"><span><strong>A)</strong> while</span></label>
+<label class="option-label"><input type="radio" name="q7" value="B"><span><strong>B)</strong> switch-case</span></label>
+<label class="option-label"><input type="radio" name="q7" value="C"><span><strong>C)</strong> for</span></label>
+<label class="option-label"><input type="radio" name="q7" value="D"><span><strong>D)</strong> Scanner</span></label>
+<label class="option-label"><input type="radio" name="q7" value="E"><span><strong>E)</strong> boolean</span></label></div></div><div class="question-box mc-question" data-answer="B"><div class="question-title"><span class="question-number">Questão 08</span> Sobre métodos em Java, assinale a alternativa CORRETA:</div><div class="options-list"><label class="option-label"><input type="radio" name="q8" value="A"><span><strong>A)</strong> Um método declarado com void deve obrigatoriamente conter return 0;.</span></label>
+<label class="option-label"><input type="radio" name="q8" value="B"><span><strong>B)</strong> Todo método precisa estar dentro de uma classe.</span></label>
+<label class="option-label"><input type="radio" name="q8" value="C"><span><strong>C)</strong> Um método não pode receber mais de um parâmetro.</span></label>
+<label class="option-label"><input type="radio" name="q8" value="D"><span><strong>D)</strong> O método main não pode chamar outros métodos da mesma classe.</span></label>
+<label class="option-label"><input type="radio" name="q8" value="E"><span><strong>E)</strong> Variáveis criadas dentro de um método podem ser usadas livremente fora dele.</span></label></div></div><div class="question-box mc-question" data-answer="B"><div class="question-title"><span class="question-number">Questão 09</span> Qual será o resultado impresso pelo programa abaixo?</div><div class="code-wrapper"><div class="code-header"><span>Trecho Java</span><span>Analise o código</span></div><pre>public static int calcular(int x, int y) {
+    return (x * 2) + y;
+}
+public static void main(String[] args) {
+    System.out.println(calcular(5, 4));
+}</pre></div><div class="options-list"><label class="option-label"><input type="radio" name="q9" value="A"><span><strong>A)</strong> 12</span></label>
+<label class="option-label"><input type="radio" name="q9" value="B"><span><strong>B)</strong> 14</span></label>
+<label class="option-label"><input type="radio" name="q9" value="C"><span><strong>C)</strong> 24</span></label>
+<label class="option-label"><input type="radio" name="q9" value="D"><span><strong>D)</strong> 7</span></label>
+<label class="option-label"><input type="radio" name="q9" value="E"><span><strong>E)</strong> 2</span></label></div></div><div class="question-box mc-question" data-answer="C"><div class="question-title"><span class="question-number">Questão 10</span> Qual é a forma correta de percorrer todos os elementos de um vetor int[] lista sem risco de ultrapassar seu limite?</div><div class="options-list"><label class="option-label"><input type="radio" name="q10" value="A"><span><strong>A)</strong> for (int i = 0; i <= lista.length; i++)</span></label>
+<label class="option-label"><input type="radio" name="q10" value="B"><span><strong>B)</strong> for (int i = 1; i <= lista.length; i++)</span></label>
+<label class="option-label"><input type="radio" name="q10" value="C"><span><strong>C)</strong> for (int i = 0; i < lista.length; i++)</span></label>
+<label class="option-label"><input type="radio" name="q10" value="D"><span><strong>D)</strong> for (int i = 0; i < lista.length - 1; i++)</span></label>
+<label class="option-label"><input type="radio" name="q10" value="E"><span><strong>E)</strong> while (lista.length > 0)</span></label></div></div><div class="question-box"><div class="question-title"><span class="question-number">Questão 11 • Prática</span> Escreva um programa Java completo chamado SistemaNotas que leia as 4 notas (double) de um aluno e armazene-as em um vetor. Crie um método público e estático double calcularMedia(double[] notas) que receba esse vetor e retorne a média. No main, exiba a média e informe 'Aprovado' (média >= 7.0), 'Recuperação' (média >= 5.0 e < 7.0) ou 'Reprovado' (média < 5.0).</div><textarea class="code-writing-area" placeholder="Escreva aqui o código Java completo..."></textarea><div class="solution-toggle"><button type="button" class="btn" onclick="toggleSolucao(this)">Ver Sugestão de Código</button><div class="solution-box"><strong>Sugestão de implementação em Java:</strong><div class="code-wrapper"><div class="code-header"><span>Solução Exemplo</span><span>Java</span></div><pre>import java.util.Scanner;
+
+public class SistemaNotas {
+
+    public static double calcularMedia(double[] notas) {
+        double soma = 0;
+        for (int i = 0; i < notas.length; i++) {
+            soma += notas[i];
+        }
+        return soma / notas.length;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double[] notas = new double[4];
+
+        for (int i = 0; i < notas.length; i++) {
+            System.out.print("Digite a nota " + (i + 1) + ": ");
+            notas[i] = sc.nextDouble();
+        }
+
+        double media = calcularMedia(notas);
+        System.out.println("Média final: " + media);
+
+        if (media >= 7.0) {
+            System.out.println("Situação: Aprovado");
+        } else if (media >= 5.0) {
+            System.out.println("Situação: Recuperação");
+        } else {
+            System.out.println("Situação: Reprovado");
+        }
+
+        sc.close();
+    }
+}</pre></div></div></div></div><div class="question-box"><div class="question-title"><span class="question-number">Questão 12 • Prática</span> Escreva um programa Java completo chamado CaixaEletronico que apresente um menu em laço do-while com as opções: 1 - Ver Saldo, 2 - Depositar, 3 - Sacar e 0 - Sair. Considere um saldo inicial de R$ 1000.00. No saque, valide se há saldo suficiente antes de descontar o valor.</div><textarea class="code-writing-area" placeholder="Escreva aqui o código Java completo..."></textarea><div class="solution-toggle"><button type="button" class="btn" onclick="toggleSolucao(this)">Ver Sugestão de Código</button><div class="solution-box"><strong>Sugestão de implementação em Java:</strong><div class="code-wrapper"><div class="code-header"><span>Solução Exemplo</span><span>Java</span></div><pre>import java.util.Scanner;
+
+public class CaixaEletronico {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double saldo = 1000.00;
+        int opcao;
+
+        do {
+            System.out.println("\n=== CAIXA ELETRÔNICO ===");
+            System.out.println("1 - Ver Saldo");
+            System.out.println("2 - Depositar");
+            System.out.println("3 - Sacar");
+            System.out.println("0 - Sair");
+            System.out.print("Escolha uma opção: ");
+            opcao = sc.nextInt();
+
+            switch (opcao) {
+                case 1:
+                    System.out.println("Saldo atual: R$ " + saldo);
+                    break;
+                case 2:
+                    System.out.print("Valor para depósito: R$ ");
+                    double dep = sc.nextDouble();
+                    if (dep > 0) {
+                        saldo += dep;
+                        System.out.println("Depósito realizado!");
+                    }
+                    break;
+                case 3:
+                    System.out.print("Valor para saque: R$ ");
+                    double saq = sc.nextDouble();
+                    if (saq > 0 && saq <= saldo) {
+                        saldo -= saq;
+                        System.out.println("Saque realizado!");
+                    } else {
+                        System.out.println("Saldo insuficiente ou valor inválido.");
+                    }
+                    break;
+                case 0:
+                    System.out.println("Encerrando atendimento...");
+                    break;
+                default:
+                    System.out.println("Opção inválida!");
+            }
+        } while (opcao != 0);
+
+        sc.close();
+    }
+}</pre></div></div></div></div>
+    <div class="quiz-actions">
+      <button type="button" class="btn btn-orange" onclick="verificarRespostas('form-av', 'fb-av')">Verificar Respostas Objetivas</button>
+      <button type="button" class="btn" onclick="limparRespostas('form-av', 'fb-av')">Limpar Respostas</button>
+      <span id="fb-av" class="quiz-feedback"></span>
+    </div>
+  </form>
+</section>
+
+<div class="page-nav-footer">
+  <a href="modulo6.html" class="btn">&larr; Anterior: Módulo VI</a>
+  <a href="index.html" class="btn btn-orange">Voltar à Página Inicial</a>
+</div>
+
+  </main>
+
+  <footer>
+    <p><strong>Curso Completo de Lógica de Programação com Java Básico</strong></p>
+    <p>Apostila Interativa • 6 Módulos • 60 Exercícios de Fixação • Avaliação Final</p>
+  </footer>
+  <script src="script.js"></script>
+    
+</body>
+</html>

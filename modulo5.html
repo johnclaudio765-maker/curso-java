@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo V - Vetores e Matrizes | Lógica de Programação com Java Básico</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="brand">
+        <span class="brand-badge">JAVA</span>
+        <span>Lógica de Programação</span>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="">Início & Plano</a></li>
+<li><a href="modulo1.html" class="">Módulo I</a></li>
+<li><a href="modulo2.html" class="">Módulo II</a></li>
+<li><a href="modulo3.html" class="">Módulo III</a></li>
+<li><a href="modulo4.html" class="">Módulo IV</a></li>
+<li><a href="modulo5.html" class="active">Módulo V</a></li>
+<li><a href="modulo6.html" class="">Módulo VI</a></li>
+<li><a href="avaliacao.html" class="">Avaliação Final</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-container">
+    
+<div class="chapter-separator">
+  <div class="chapter-line"></div>
+  <div class="chapter-badge">Módulo V</div>
+  <div class="chapter-line right"></div>
+</div>
+
+<section class="module-intro-card">
+  <h1>Vetores (Arrays) e Matrizes</h1>
+  <p>
+    E se precisarmos guardar 50 notas de alunos ou representar um tabuleiro de jogo da velha? Em vez de criar 50 variáveis soltas, usamos <strong>vetores</strong> e <strong>matrizes</strong> para organizar coleções homogêneas na memória.
+  </p>
+  <div class="exercise-notice">
+    Atenção: Este módulo contém 10 questões ao final (8 objetivas e 2 práticas de código).
+  </div>
+</section>
+
+<div class="title-balloon">1. Vetores (Arrays Unidimensionais)</div>
+<section class="content-card">
+  <p>
+    Um vetor é uma sequência indexada de posições do mesmo tipo. Em Java, a contagem dos índices sempre começa no <strong>0</strong> e vai até <code class="inline">tamanho - 1</code>.
+  </p>
+
+  <div class="code-wrapper">
+    <div class="code-header"><span>ExemploVetor.java</span><span>Declaração e Percurso</span></div>
+    <pre>String[] linguagens = {"Java", "Python", "C#", "JavaScript"};
+
+for (int i = 0; i < linguagens.length; i++) {
+    System.out.println("Posição " + i + ": " + linguagens[i]);
+}</pre>
+  </div>
+</section>
+
+<div class="title-balloon">2. Matrizes (Arrays Bidimensionais)</div>
+<section class="content-card">
+  <p>
+    Uma matriz funciona como uma tabela com <strong>linhas</strong> e <strong>colunas</strong>, percorrida normalmente com dois laços <code class="inline">for</code> aninhados.
+  </p>
+
+  <div class="code-wrapper">
+    <div class="code-header"><span>ExemploMatriz.java</span><span>Matriz 2x2</span></div>
+    <pre>int[][] matriz = {
+    {1, 2},
+    {3, 4}
+};
+
+for (int linha = 0; linha < 2; linha++) {
+    for (int col = 0; col < 2; col++) {
+        System.out.print(matriz[linha][col] + " ");
+    }
+    System.out.println();
+}</pre>
+  </div>
+</section>
+
+<div class="title-balloon orange">Exercícios do Módulo V (10 Questões)</div>
+<section class="exercise-section">
+  <form id="form-m5">
+    <div class="question-box mc-question" data-answer="B"><div class="question-title"><span class="question-number">Questão 01</span> Em Java, qual é o índice do primeiro elemento de um vetor (array)?</div><div class="options-list"><label class="option-label"><input type="radio" name="q1" value="A"><span><strong>A)</strong> 1</span></label>
+<label class="option-label"><input type="radio" name="q1" value="B"><span><strong>B)</strong> 0</span></label>
+<label class="option-label"><input type="radio" name="q1" value="C"><span><strong>C)</strong> -1</span></label>
+<label class="option-label"><input type="radio" name="q1" value="D"><span><strong>D)</strong> Depende do tipo do vetor</span></label>
+<label class="option-label"><input type="radio" name="q1" value="E"><span><strong>E)</strong> 10</span></label></div></div><div class="question-box mc-question" data-answer="A"><div class="question-title"><span class="question-number">Questão 02</span> Como declaramos e instanciamos corretamente um vetor de 5 números inteiros em Java?</div><div class="options-list"><label class="option-label"><input type="radio" name="q2" value="A"><span><strong>A)</strong> int[] numeros = new int[5];</span></label>
+<label class="option-label"><input type="radio" name="q2" value="B"><span><strong>B)</strong> int numeros = new int(5);</span></label>
+<label class="option-label"><input type="radio" name="q2" value="C"><span><strong>C)</strong> array int[5] numeros;</span></label>
+<label class="option-label"><input type="radio" name="q2" value="D"><span><strong>D)</strong> int[5] numeros = new int[];</span></label>
+<label class="option-label"><input type="radio" name="q2" value="E"><span><strong>E)</strong> vetor numeros = int[5];</span></label></div></div><div class="question-box mc-question" data-answer="C"><div class="question-title"><span class="question-number">Questão 03</span> Qual propriedade retorna a quantidade total de elementos de um vetor chamado notas?</div><div class="options-list"><label class="option-label"><input type="radio" name="q3" value="A"><span><strong>A)</strong> notas.size()</span></label>
+<label class="option-label"><input type="radio" name="q3" value="B"><span><strong>B)</strong> notas.count</span></label>
+<label class="option-label"><input type="radio" name="q3" value="C"><span><strong>C)</strong> notas.length</span></label>
+<label class="option-label"><input type="radio" name="q3" value="D"><span><strong>D)</strong> notas.len()</span></label>
+<label class="option-label"><input type="radio" name="q3" value="E"><span><strong>E)</strong> notas.total</span></label></div></div><div class="question-box mc-question" data-answer="C"><div class="question-title"><span class="question-number">Questão 04</span> O que acontece se tentarmos acessar v[5] em um vetor declarado como int[] v = new int[5];?</div><div class="options-list"><label class="option-label"><input type="radio" name="q4" value="A"><span><strong>A)</strong> Retorna o último elemento normalmente.</span></label>
+<label class="option-label"><input type="radio" name="q4" value="B"><span><strong>B)</strong> Retorna 0.</span></label>
+<label class="option-label"><input type="radio" name="q4" value="C"><span><strong>C)</strong> Ocorre a exceção ArrayIndexOutOfBoundsException em tempo de execução.</span></label>
+<label class="option-label"><input type="radio" name="q4" value="D"><span><strong>D)</strong> O vetor aumenta de tamanho sozinho.</span></label>
+<label class="option-label"><input type="radio" name="q4" value="E"><span><strong>E)</strong> Retorna null.</span></label></div></div><div class="question-box mc-question" data-answer="C"><div class="question-title"><span class="question-number">Questão 05</span> Qual valor será impresso pelo código abaixo?</div><div class="code-wrapper"><div class="code-header"><span>Trecho Java</span><span>Analise o código</span></div><pre>int[] valores = {10, 20, 30, 40};
+System.out.println(valores[2]);</pre></div><div class="options-list"><label class="option-label"><input type="radio" name="q5" value="A"><span><strong>A)</strong> 10</span></label>
+<label class="option-label"><input type="radio" name="q5" value="B"><span><strong>B)</strong> 20</span></label>
+<label class="option-label"><input type="radio" name="q5" value="C"><span><strong>C)</strong> 30</span></label>
+<label class="option-label"><input type="radio" name="q5" value="D"><span><strong>D)</strong> 40</span></label>
+<label class="option-label"><input type="radio" name="q5" value="E"><span><strong>E)</strong> Erro de compilação</span></label></div></div><div class="question-box mc-question" data-answer="B"><div class="question-title"><span class="question-number">Questão 06</span> Como declaramos uma matriz (array bidimensional) de inteiros com 3 linhas e 4 colunas?</div><div class="options-list"><label class="option-label"><input type="radio" name="q6" value="A"><span><strong>A)</strong> int[] matriz = new int[3, 4];</span></label>
+<label class="option-label"><input type="radio" name="q6" value="B"><span><strong>B)</strong> int[][] matriz = new int[3][4];</span></label>
+<label class="option-label"><input type="radio" name="q6" value="C"><span><strong>C)</strong> matrix int[3][4] matriz;</span></label>
+<label class="option-label"><input type="radio" name="q6" value="D"><span><strong>D)</strong> int[][] matriz = new int[4][3];</span></label>
+<label class="option-label"><input type="radio" name="q6" value="E"><span><strong>E)</strong> int matriz[3][4];</span></label></div></div><div class="question-box mc-question" data-answer="B"><div class="question-title"><span class="question-number">Questão 07</span> Em uma matriz int[][] m = new int[2][3];, como acessamos o elemento da primeira linha e segunda coluna?</div><div class="options-list"><label class="option-label"><input type="radio" name="q7" value="A"><span><strong>A)</strong> m[1][2]</span></label>
+<label class="option-label"><input type="radio" name="q7" value="B"><span><strong>B)</strong> m[0][1]</span></label>
+<label class="option-label"><input type="radio" name="q7" value="C"><span><strong>C)</strong> m[1][0]</span></label>
+<label class="option-label"><input type="radio" name="q7" value="D"><span><strong>D)</strong> m[0][2]</span></label>
+<label class="option-label"><input type="radio" name="q7" value="E"><span><strong>E)</strong> m[2][1]</span></label></div></div><div class="question-box mc-question" data-answer="A"><div class="question-title"><span class="question-number">Questão 08</span> Qual é a principal característica de um array tradicional em Java em relação ao seu tamanho?</div><div class="options-list"><label class="option-label"><input type="radio" name="q8" value="A"><span><strong>A)</strong> Seu tamanho é fixo após ser instanciado com new.</span></label>
+<label class="option-label"><input type="radio" name="q8" value="B"><span><strong>B)</strong> Ele aceita misturar String e int na mesma posição.</span></label>
+<label class="option-label"><input type="radio" name="q8" value="C"><span><strong>C)</strong> Ele cresce automaticamente ao adicionar itens.</span></label>
+<label class="option-label"><input type="radio" name="q8" value="D"><span><strong>D)</strong> Não pode ser percorrido com laço for.</span></label>
+<label class="option-label"><input type="radio" name="q8" value="E"><span><strong>E)</strong> Só armazena números negativos.</span></label></div></div><div class="question-box"><div class="question-title"><span class="question-number">Questão 09 • Prática</span> Escreva um programa Java completo chamado MediaVetor que crie um vetor de 5 números decimais (double), leia os 5 valores via Scanner, calcule e imprima a média deles.</div><textarea class="code-writing-area" placeholder="Escreva aqui o código Java completo..."></textarea><div class="solution-toggle"><button type="button" class="btn" onclick="toggleSolucao(this)">Ver Sugestão de Código</button><div class="solution-box"><strong>Sugestão de implementação em Java:</strong><div class="code-wrapper"><div class="code-header"><span>Solução Exemplo</span><span>Java</span></div><pre>import java.util.Scanner;
+
+public class MediaVetor {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double[] valores = new double[5];
+        double soma = 0;
+
+        for (int i = 0; i < valores.length; i++) {
+            System.out.print("Digite o valor " + (i + 1) + ": ");
+            valores[i] = sc.nextDouble();
+            soma += valores[i];
+        }
+
+        double media = soma / valores.length;
+        System.out.println("Média dos valores: " + media);
+        sc.close();
+    }
+}</pre></div></div></div></div><div class="question-box"><div class="question-title"><span class="question-number">Questão 10 • Prática</span> Escreva um programa Java completo chamado MaiorElemento que preencha um vetor de 6 números inteiros digitados pelo usuário e, ao final, encontre e exiba qual foi o maior número digitado.</div><textarea class="code-writing-area" placeholder="Escreva aqui o código Java completo..."></textarea><div class="solution-toggle"><button type="button" class="btn" onclick="toggleSolucao(this)">Ver Sugestão de Código</button><div class="solution-box"><strong>Sugestão de implementação em Java:</strong><div class="code-wrapper"><div class="code-header"><span>Solução Exemplo</span><span>Java</span></div><pre>import java.util.Scanner;
+
+public class MaiorElemento {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int[] numeros = new int[6];
+
+        for (int i = 0; i < numeros.length; i++) {
+            System.out.print("Digite o número " + (i + 1) + ": ");
+            numeros[i] = sc.nextInt();
+        }
+
+        int maior = numeros[0];
+        for (int i = 1; i < numeros.length; i++) {
+            if (numeros[i] > maior) {
+                maior = numeros[i];
+            }
+        }
+
+        System.out.println("O maior número digitado foi: " + maior);
+        sc.close();
+    }
+}</pre></div></div></div></div>
+    <div class="quiz-actions">
+      <button type="button" class="btn btn-orange" onclick="verificarRespostas('form-m5', 'fb-m5')">Verificar Respostas Objetivas</button>
+      <button type="button" class="btn" onclick="limparRespostas('form-m5', 'fb-m5')">Limpar Respostas</button>
+      <span id="fb-m5" class="quiz-feedback"></span>
+    </div>
+  </form>
+</section>
+
+<div class="page-nav-footer">
+  <a href="modulo4.html" class="btn">&larr; Anterior: Módulo IV</a>
+  <a href="modulo6.html" class="btn btn-orange">Próximo: Módulo VI &rarr;</a>
+</div>
+
+  </main>
+
+  <footer>
+    <p><strong>Curso Completo de Lógica de Programação com Java Básico</strong></p>
+    <p>Apostila Interativa • 6 Módulos • 60 Exercícios de Fixação • Avaliação Final</p>
+  </footer>
+  <script src="script.js"></script>
+    
+</body>
+</html>

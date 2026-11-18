@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo IV - Estruturas de Repetição | Lógica de Programação com Java Básico</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="brand">
+        <span class="brand-badge">JAVA</span>
+        <span>Lógica de Programação</span>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="">Início & Plano</a></li>
+<li><a href="modulo1.html" class="">Módulo I</a></li>
+<li><a href="modulo2.html" class="">Módulo II</a></li>
+<li><a href="modulo3.html" class="">Módulo III</a></li>
+<li><a href="modulo4.html" class="active">Módulo IV</a></li>
+<li><a href="modulo5.html" class="">Módulo V</a></li>
+<li><a href="modulo6.html" class="">Módulo VI</a></li>
+<li><a href="avaliacao.html" class="">Avaliação Final</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-container">
+    
+<div class="chapter-separator">
+  <div class="chapter-line"></div>
+  <div class="chapter-badge">Módulo IV</div>
+  <div class="chapter-line right"></div>
+</div>
+
+<section class="module-intro-card">
+  <h1>Estruturas de Repetição (Laços)</h1>
+  <p>
+    Computadores são imbatíveis em tarefas repetitivas. Neste módulo, vamos aprender a repetir blocos de código usando <code class="inline">while</code>, <code class="inline">do-while</code> e <code class="inline">for</code>, evitando duplicação e automatizando cálculos.
+  </p>
+  <div class="exercise-notice">
+    Atenção: Este módulo contém 10 questões ao final (8 objetivas e 2 práticas de código).
+  </div>
+</section>
+
+<div class="title-balloon">1. Os Três Laços do Java</div>
+<section class="content-card">
+  <div class="table-caption">Tabela 4 — Comparativo das Estruturas de Repetição</div>
+  <div class="table-responsive">
+    <table>
+      <thead>
+        <tr>
+          <th>Estrutura</th>
+          <th>Teste da Condição</th>
+          <th>Quando Usar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code class="inline">while</code></td>
+          <td>No início (antes de entrar)</td>
+          <td>Quando não sabemos quantas vezes vai repetir (ex.: ler até digitar sair).</td>
+        </tr>
+        <tr>
+          <td><code class="inline">do-while</code></td>
+          <td>No final (após executar)</td>
+          <td>Quando o bloco precisa rodar pelo menos 1 vez (ex.: exibir um menu).</td>
+        </tr>
+        <tr>
+          <td><code class="inline">for</code></td>
+          <td>No início, com contador integrado</td>
+          <td>Quando sabemos o início, o fim e o passo da contagem.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="code-wrapper">
+    <div class="code-header"><span>ExemplosLacos.java</span><span>while e for</span></div>
+    <pre>// Contagem regressiva com while
+int contador = 3;
+while (contador > 0) {
+    System.out.println("Contando: " + contador);
+    contador--;
+}
+
+// Contagem progressiva com for
+for (int i = 1; i <= 5; i++) {
+    System.out.println("Passo " + i);
+}</pre>
+  </div>
+</section>
+
+<div class="title-balloon orange">Exercícios do Módulo IV (10 Questões)</div>
+<section class="exercise-section">
+  <form id="form-m4">
+    <div class="question-box mc-question" data-answer="C"><div class="question-title"><span class="question-number">Questão 01</span> Qual estrutura de repetição garante que o bloco de código seja executado PELO MENOS UMA VEZ, mesmo que a condição seja falsa desde o início?</div><div class="options-list"><label class="option-label"><input type="radio" name="q1" value="A"><span><strong>A)</strong> for</span></label>
+<label class="option-label"><input type="radio" name="q1" value="B"><span><strong>B)</strong> while</span></label>
+<label class="option-label"><input type="radio" name="q1" value="C"><span><strong>C)</strong> do-while</span></label>
+<label class="option-label"><input type="radio" name="q1" value="D"><span><strong>D)</strong> if-else</span></label>
+<label class="option-label"><input type="radio" name="q1" value="E"><span><strong>E)</strong> switch</span></label></div></div><div class="question-box mc-question" data-answer="B"><div class="question-title"><span class="question-number">Questão 02</span> Quantas vezes a palavra 'Java' será impressa pelo laço abaixo?</div><div class="code-wrapper"><div class="code-header"><span>Trecho Java</span><span>Analise o código</span></div><pre>for (int i = 1; i <= 5; i++) {
+    System.out.println("Java");
+}</pre></div><div class="options-list"><label class="option-label"><input type="radio" name="q2" value="A"><span><strong>A)</strong> 4 vezes</span></label>
+<label class="option-label"><input type="radio" name="q2" value="B"><span><strong>B)</strong> 5 vezes</span></label>
+<label class="option-label"><input type="radio" name="q2" value="C"><span><strong>C)</strong> 6 vezes</span></label>
+<label class="option-label"><input type="radio" name="q2" value="D"><span><strong>D)</strong> 1 vez</span></label>
+<label class="option-label"><input type="radio" name="q2" value="E"><span><strong>E)</strong> Infinitas vezes</span></label></div></div><div class="question-box mc-question" data-answer="B"><div class="question-title"><span class="question-number">Questão 03</span> O que ocorre se criarmos um laço while (true) sem nenhum comando break ou condição de saída interna?</div><div class="options-list"><label class="option-label"><input type="radio" name="q3" value="A"><span><strong>A)</strong> O programa compila e encerra imediatamente.</span></label>
+<label class="option-label"><input type="radio" name="q3" value="B"><span><strong>B)</strong> Ocorre um laço infinito (loop infinito).</span></label>
+<label class="option-label"><input type="radio" name="q3" value="C"><span><strong>C)</strong> O Java ignora o bloco automaticamente.</span></label>
+<label class="option-label"><input type="radio" name="q3" value="D"><span><strong>D)</strong> A variável true vira false após 10 voltas.</span></label>
+<label class="option-label"><input type="radio" name="q3" value="E"><span><strong>E)</strong> O compilador recusa o código.</span></label></div></div><div class="question-box mc-question" data-answer="C"><div class="question-title"><span class="question-number">Questão 04</span> Qual comando dentro de um laço interrompe imediatamente toda a repetição e sai da estrutura?</div><div class="options-list"><label class="option-label"><input type="radio" name="q4" value="A"><span><strong>A)</strong> continue;</span></label>
+<label class="option-label"><input type="radio" name="q4" value="B"><span><strong>B)</strong> skip;</span></label>
+<label class="option-label"><input type="radio" name="q4" value="C"><span><strong>C)</strong> break;</span></label>
+<label class="option-label"><input type="radio" name="q4" value="D"><span><strong>D)</strong> next;</span></label>
+<label class="option-label"><input type="radio" name="q4" value="E"><span><strong>E)</strong> pause;</span></label></div></div><div class="question-box mc-question" data-answer="B"><div class="question-title"><span class="question-number">Questão 05</span> Qual é o valor final da variável soma após a execução do trecho abaixo?</div><div class="code-wrapper"><div class="code-header"><span>Trecho Java</span><span>Analise o código</span></div><pre>int soma = 0;
+for (int i = 1; i <= 4; i++) {
+    soma += i;
+}</pre></div><div class="options-list"><label class="option-label"><input type="radio" name="q5" value="A"><span><strong>A)</strong> 6</span></label>
+<label class="option-label"><input type="radio" name="q5" value="B"><span><strong>B)</strong> 10</span></label>
+<label class="option-label"><input type="radio" name="q5" value="C"><span><strong>C)</strong> 15</span></label>
+<label class="option-label"><input type="radio" name="q5" value="D"><span><strong>D)</strong> 4</span></label>
+<label class="option-label"><input type="radio" name="q5" value="E"><span><strong>E)</strong> 0</span></label></div></div><div class="question-box mc-question" data-answer="B"><div class="question-title"><span class="question-number">Questão 06</span> O que o comando continue; faz dentro de um laço for ou while?</div><div class="options-list"><label class="option-label"><input type="radio" name="q6" value="A"><span><strong>A)</strong> Encerra o programa por completo.</span></label>
+<label class="option-label"><input type="radio" name="q6" value="B"><span><strong>B)</strong> Pula o restante da iteração atual e avança para a próxima repetição do laço.</span></label>
+<label class="option-label"><input type="radio" name="q6" value="C"><span><strong>C)</strong> Reinicia o computador.</span></label>
+<label class="option-label"><input type="radio" name="q6" value="D"><span><strong>D)</strong> Zera todas as variáveis do método main.</span></label>
+<label class="option-label"><input type="radio" name="q6" value="E"><span><strong>E)</strong> Sai do laço imediatamente.</span></label></div></div><div class="question-box mc-question" data-answer="A"><div class="question-title"><span class="question-number">Questão 07</span> Qual estrutura de repetição é mais indicada quando já sabemos previamente a quantidade exata de repetições (ex.: percorrer de 1 a 100)?</div><div class="options-list"><label class="option-label"><input type="radio" name="q7" value="A"><span><strong>A)</strong> for</span></label>
+<label class="option-label"><input type="radio" name="q7" value="B"><span><strong>B)</strong> switch</span></label>
+<label class="option-label"><input type="radio" name="q7" value="C"><span><strong>C)</strong> if</span></label>
+<label class="option-label"><input type="radio" name="q7" value="D"><span><strong>D)</strong> try-catch</span></label>
+<label class="option-label"><input type="radio" name="q7" value="E"><span><strong>E)</strong> else</span></label></div></div><div class="question-box mc-question" data-answer="C"><div class="question-title"><span class="question-number">Questão 08</span> O que o operador i++ faz ao final de cada passo em um laço for?</div><div class="options-list"><label class="option-label"><input type="radio" name="q8" value="A"><span><strong>A)</strong> Multiplica i por 2.</span></label>
+<label class="option-label"><input type="radio" name="q8" value="B"><span><strong>B)</strong> Decrementa 1 do valor de i.</span></label>
+<label class="option-label"><input type="radio" name="q8" value="C"><span><strong>C)</strong> Incrementa 1 ao valor atual de i (equivale a i = i + 1).</span></label>
+<label class="option-label"><input type="radio" name="q8" value="D"><span><strong>D)</strong> Zera a variável i.</span></label>
+<label class="option-label"><input type="radio" name="q8" value="E"><span><strong>E)</strong> Verifica se i é positivo.</span></label></div></div><div class="question-box"><div class="question-title"><span class="question-number">Questão 09 • Prática</span> Escreva um programa Java completo chamado Tabuada que leia um número inteiro digitado pelo usuário e imprima a tabuada desse número de 1 a 10 utilizando um laço for.</div><textarea class="code-writing-area" placeholder="Escreva aqui o código Java completo..."></textarea><div class="solution-toggle"><button type="button" class="btn" onclick="toggleSolucao(this)">Ver Sugestão de Código</button><div class="solution-box"><strong>Sugestão de implementação em Java:</strong><div class="code-wrapper"><div class="code-header"><span>Solução Exemplo</span><span>Java</span></div><pre>import java.util.Scanner;
+
+public class Tabuada {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Digite um número para ver a tabuada: ");
+        int num = sc.nextInt();
+
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(num + " x " + i + " = " + (num * i));
+        }
+
+        sc.close();
+    }
+}</pre></div></div></div></div><div class="question-box"><div class="question-title"><span class="question-number">Questão 10 • Prática</span> Escreva um programa Java completo chamado SomaAteZero que leia números inteiros continuamente usando while até que o usuário digite 0. Ao final, exiba a soma total de todos os números digitados.</div><textarea class="code-writing-area" placeholder="Escreva aqui o código Java completo..."></textarea><div class="solution-toggle"><button type="button" class="btn" onclick="toggleSolucao(this)">Ver Sugestão de Código</button><div class="solution-box"><strong>Sugestão de implementação em Java:</strong><div class="code-wrapper"><div class="code-header"><span>Solução Exemplo</span><span>Java</span></div><pre>import java.util.Scanner;
+
+public class SomaAteZero {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int soma = 0;
+        int numero;
+
+        System.out.print("Digite um número (0 para sair): ");
+        numero = sc.nextInt();
+
+        while (numero != 0) {
+            soma += numero;
+            System.out.print("Digite outro número (0 para sair): ");
+            numero = sc.nextInt();
+        }
+
+        System.out.println("Soma total: " + soma);
+        sc.close();
+    }
+}</pre></div></div></div></div>
+    <div class="quiz-actions">
+      <button type="button" class="btn btn-orange" onclick="verificarRespostas('form-m4', 'fb-m4')">Verificar Respostas Objetivas</button>
+      <button type="button" class="btn" onclick="limparRespostas('form-m4', 'fb-m4')">Limpar Respostas</button>
+      <span id="fb-m4" class="quiz-feedback"></span>
+    </div>
+  </form>
+</section>
+
+<div class="page-nav-footer">
+  <a href="modulo3.html" class="btn">&larr; Anterior: Módulo III</a>
+  <a href="modulo5.html" class="btn btn-orange">Próximo: Módulo V &rarr;</a>
+</div>
+
+  </main>
+
+  <footer>
+    <p><strong>Curso Completo de Lógica de Programação com Java Básico</strong></p>
+    <p>Apostila Interativa • 6 Módulos • 60 Exercícios de Fixação • Avaliação Final</p>
+  </footer>
+  <script src="script.js"></script>
+    
+</body>
+</html>
